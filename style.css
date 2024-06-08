@@ -1,0 +1,432 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --grey: #878787;
+    --white: #fffffe;
+    --black: #000000;
+    --yellow: #FFB534;
+    --blue: #3da9fc;
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-container {
+    background-color: rgb(255, 255, 255, 90%);
+    position: fixed;
+    width: 100%;
+    /* height: 50px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--black);
+    z-index: 1;
+}
+
+.navbar-container h1 {
+    font-family: 'Protest Riot', sans-serif;
+    font-size: 30px;
+    border: 2px solid var(--yellow);
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 70px;
+    color: var(--black);
+}
+
+.nav-list ul {
+    padding: 20px 70px 20px 30px;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    gap: 50px;
+}
+
+.nav-list ul li {
+    list-style-type: none;
+}
+
+.nav-list ul li a {
+    color: var(--grey);
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.nav-list ul li a:hover {
+    color: var(--black);
+    border-bottom: 2px solid var(--black);
+}
+
+.sub-menu-wrap {
+    position: absolute;
+    top: 100%;
+    left: 69%;
+    width: 250px;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+}
+
+.sub-menu-wrap.open-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sub-menu {
+    background-color: var(--white);
+    border: 2px solid var(--black);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.sub-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: var(--grey);
+}
+
+.sub-menu a p {
+    transition: 0.2 ease-in-out;
+}
+
+.sub-menu a:hover {
+    color: var(--black);
+    transform: scale(1.01);
+}
+
+.border {
+    height: 2px;
+    background-color: var(--black);
+}
+
+.home {
+    padding: 70px;
+    display: flex;
+    gap: 100px;  
+    align-items: center;
+    height: 550px;
+}
+
+.title {
+    margin-block: 10px;
+}
+
+.title h2 {
+    font-family: 'Protest Riot', sans-serif;
+    font-size: 50px;
+}
+
+.title h1 {
+    font-family: 'Protest Riot', sans-serif;
+    font-size: 100px;
+}
+
+.main-title p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-block: 20px;
+}
+
+.button-check {
+    display: flex;
+    gap: 20px;
+}
+
+.button-check a {
+    font-family: 'Protest Riot', sans-serif; 
+    padding: 10px;
+    width: 150px;
+    background: var(--white);
+    border: 2px solid var(--yellow);
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.button-check a:hover{
+    background-color: var(--yellow);
+}
+
+.profil {
+    width: 300px;
+}
+
+.profil img {
+    width: 100%;
+    border: 2px solid var(--black);
+    border-top-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+}
+
+.about-me {
+    height: 550px;
+    padding: 70px;
+    background-color: var(--blue);
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.description-me h2{
+    font-family: 'Protest Riot', sans-serif;
+    font-size: 50px;
+}
+
+.description-me span {
+    color: var(--white);
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: var(--black);
+}
+
+.description-me p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.skill {
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-2 {
+    font-family: 'Protest Riot', sans-serif;
+    font-size: 40px;
+    border: 3px solid var(--yellow);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.content-card {
+    width: 150px;
+}
+
+.content-card img{
+    width: 100%;
+    border: 2px solid var(--yellow);
+    border-radius: 10px;
+}
+
+.content-card p {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    background-color: var(--blue);
+}
+
+.projects h2 {
+    font-family: 'Protest Riot', sans-serif;
+    font-size: 50px;
+    border: 3px solid var(--white);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.project-card {
+    width: 350px;
+    background-color: var(--white);
+    border: 3px solid var(--black);
+    border-radius: 10px;
+    padding: 15px;
+    transition: 0.1s ease-in-out;
+}
+
+.project-card:hover {
+    transform: scale(1.01);
+}
+
+.picture-project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.border-1 {
+    height: 5px;
+    background-color: var(--black);
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+
+.picture-project p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-block: 10px;
+}
+
+.project-card img {
+    width: 350px;
+    border-radius: 10px;
+}
+
+.link-project {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.link-project a {
+    margin-right: 10px;
+    color: var(--black);
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.2s ease-in-out;
+}
+
+.link-project a:hover {
+    color: var(--blue);
+}
+
+.link-project i {
+    font-size: 30px;
+}
+
+.certificate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    background-color: var(--blue);
+}
+
+.certificate h2 {
+    font-family: 'Protest Riot', sans-serif;
+    font-size: 50px;
+    border: 3px solid var(--white);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.certif-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.certif-card {
+    width: 350px;
+    background-color: var(--white);
+    border: 3px solid var(--black);
+    border-radius: 10px;
+    padding: 15px;
+    transition: 0.1s ease-in-out;
+}
+
+.certif-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.certif-card:hover {
+    transform: scale(1.01);
+}
+
+.certif-picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.certif-picture img {
+    width: 350px;
+    border-radius: 10px;
+}
+
+.certif-picture p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-block: 10px;
+}
+
+.contact {
+    background-color: var(--white);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+.contact h2{
+    font-family: 'Protest Riot', sans-serif;
+    font-size: 40px;
+    border: 3px solid var(--yellow);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.contact p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.social-media {
+    display: flex;
+    gap: 30px;
+}
+
+.social-media a {
+    background-color: var(--white);
+    font-size: 50px;
+    color: var(--black);
+}
+
+.social-media a:hover {
+    color: var(--yellow);
+    transform: scale(1.1);
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    
+}
