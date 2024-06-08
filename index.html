@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Potofolio Thariq Rahman</title>
 </head>
@@ -70,13 +71,13 @@
 
             <!-- About Me -->
             <div id="about-me" class="about-me">
-                <aside>
+                <aside data-aos="fade-up">
                     <div class="profil">
                         <img src="assets/PXL_20221030_152831551.jpg" alt="">
                     </div>
                 </aside>
 
-                <article class="description-me">
+                <article class="description-me" data-aos="fade-up">
                     <h2>About <span>Me</span></h2>
                         <p>2nd semester student at Bakrie University majoring in Informatics who is interested in Website Development.</p>
                         <p>I have just entered the world of programming, my new experience is logic programming, basic Python, HTML, CSS, and JS</p>
@@ -89,11 +90,11 @@
 
             <!-- Skill -->
             <div id="skill" class="skill">
-                <div class="title-2">
+                <div class="title-2" data-aos="fade-up">
                     <h2>Skill</h2>
                 </div>
 
-                <div class="card">
+                <div class="card" data-aos="fade-up">
                     <div class="content-card">
                         <img src="assets/html.jpg" alt="">
                         <p>HTML</p>
@@ -212,5 +213,9 @@
 
     <script src="https://kit.fontawesome.com/51e8734cac.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
