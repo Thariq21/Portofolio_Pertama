@@ -254,6 +254,14 @@ body{
     background-color: var(--blue);
 }
 
+.project-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
 .projects h2 {
     font-family: 'Protest Riot', sans-serif;
     font-size: 50px;
